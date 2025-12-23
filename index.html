@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>המדריך לגדילה והתפתחות הילד</title>
+
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<header class="main-header"> <!-- אזור כותרת עליון של העמוד -->
+
+  <nav class="navbar navbar-expand-lg navbar-light mint-navbar"> <!-- תפריט ניווט רספונסיבי מבוסס Bootstrap -->
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" alt="לוגו" class="navbar-logo" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="תפריט ניווט">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav"> <!-- אזור קישורים מתקפל -->
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link fw-bold active" href="#">שלבי התפתחות הילד</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">אזור אישי</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">אודות</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero-section"> <!-- אזור פתיחה עליון עם רקע ותוכן -->
+
+    <div class="hero-bg"> <!-- שכבת רקע נפרדת (תמונה + overlay) -->
+      <img src="assets/banner.jpg" alt="רקע" />
+      <div class="overlay"></div>
+    </div>
+
+    <div class="container hero-content text-center"> <!-- תוכן מרכזי על גבי הרקע -->
+      <h1 class="main-title">המדריך לגדילה והתפתחות הילד</h1>
+      <h2 class="sub-title">בית הספר לאחיות ואחים וולפסון</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-7">
+
+          <div class="search-box d-flex align-items-center"> <!-- בלוק חיפוש עם חיבור ל-JS -->
+            <input type="text" id="searchInput" class="form-control"
+                   placeholder="חפש שלב התפתחותי..." />
+            <button id="searchBtn" type="button">חיפוש</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main class="container my-5"> <!-- אזור תוכן ראשי -->
+  <div class="row g-4" id="cardsContainer"></div> <!-- הזרקת כרטיסיות דרך JavaScript -->
+</main>
+
+<section class="quiz-section container my-5"> <!-- אזור בוחן עצמאי -->
+
+  <form id="quizForm" novalidate> <!-- טופס בוחן עם ולידציה ב-JS -->
+
+    <div class="id-input-container"> <!-- בלוק קלט תעודת זהות -->
+      <input type="text" id="studentId" maxlength="9" />
+    </div>
+
+    <div id="questionsContainer"> <!-- עטיפת שאלות הבוחן -->
+      <!-- שאלות ותשובות -->
+    </div>
+
+    <button type="button" id="submitQuizBtn" disabled>
+      שלח בוחן
+    </button> <!-- כפתור שליחה שנפתח דרך JS -->
+
+  </form>
+
+  <div class="modal fade" id="successPopup"> <!-- מודאל הצלחה של Bootstrap -->
+    <!-- תוכן מודאל -->
+  </div>
+
+</section>
+
+<script src="js/bootstrap.bundle.min.js"></script> <!-- טעינת רכיבי Bootstrap -->
+<script src="scorm_api.js"></script> <!-- תקשורת למערכת SCORM -->
+<script src="main.js"></script> <!-- לוגיקה ראשית של העמוד -->
+
+</body>
+
+</html>
